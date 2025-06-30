@@ -8,18 +8,18 @@ import outputs from "../amplify_outputs.json";
 import { Authenticator} from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
-// importing create API and styles for MapLibre
-import { createMap, createAmplifyGeocoder } from "maplibre-gl-js-amplify";
-import "maplibre-gl/dist/maplibre-gl.css";
-import "maplibre-gl-js-amplify/dist/public/amplify-map.css";
+// // importing create API and styles for MapLibre
+// import { createMap, createAmplifyGeocoder } from "maplibre-gl-js-amplify";
+// import "maplibre-gl/dist/maplibre-gl.css";
+// import "maplibre-gl-js-amplify/dist/public/amplify-map.css";
 
-import maplibregl from "maplibre-gl";
-import "@maplibre/maplibre-gl-geocoder/dist/maplibre-gl-geocoder.css";
-import "maplibre-gl-js-amplify/dist/public/amplify-geocoder.css"; // Optional CSS for Amplify recommended styling
+// import maplibregl from "maplibre-gl";
+// import "@maplibre/maplibre-gl-geocoder/dist/maplibre-gl-geocoder.css";
+// import "maplibre-gl-js-amplify/dist/public/amplify-geocoder.css"; // Optional CSS for Amplify recommended styling
 
-import { AmplifyGeofenceControl } from "maplibre-gl-js-amplify";
+// import { AmplifyGeofenceControl } from "maplibre-gl-js-amplify";
 
-import { drawPoints } from "maplibre-gl-js-amplify";
+// import { drawPoints } from "maplibre-gl-js-amplify";
 
 
 Amplify.configure(outputs);
@@ -71,7 +71,7 @@ async function initializeMap() {
   
 }
 
-initializeMap();
+// initializeMap();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
