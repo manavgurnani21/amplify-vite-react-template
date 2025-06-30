@@ -63,3 +63,9 @@ a {
   font-weight: 800;
   text-decoration: none;
 }
+
+#map {
+  width: 800px;
+  height: 600px;
+  position: relative;
+}
