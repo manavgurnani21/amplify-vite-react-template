@@ -13,15 +13,15 @@ const backend = defineBackend({
 });
 
 // creating new personalized stack
-const geoStack = backend.createStack("myGeoStack");
+const geoStack = backend.createStack("myNewGeoStack");
 
 // creating a location services map using L1 construct
 const map = new CfnMap(geoStack, 'MyTestMap', {
-  mapName: 'MyRasternopolMap',
+  mapName: 'ATruckMap',
   configuration: {
-    style: 'VectorEsriTopographic', // using Esri Navigation style
+    style: 'VectorHereExploreTruck', // using Esri Navigation style
   },
-  description: 'A test map for my application',
+  description: 'A test truck map for my application',
   pricingPlan: 'RequestBasedUsage',
 });
 
@@ -47,7 +47,7 @@ backend.auth.resources.unauthenticatedUserIamRole.attachInlinePolicy(myGeoPolicy
 
 // creating a location services place index
 const myNewIndex = new CfnPlaceIndex(geoStack, 'MyNewEsriPlaceIndex', {
-  dataSource: "Esri",
+  dataSource: "Here",
   dataSourceConfiguration: {
     intendedUse: "SingleUse", // this can be "SingleUse" or "Storage" suggesting that these results might be stored in a database or
   },
@@ -120,7 +120,7 @@ backend.addOutput({
     maps: {
       items : {
         [map.mapName]: {
-          style: "VectorEsriNavigation",
+          style: "VectorHereExploreTruck",
         },
       },
       default: map.mapName,
